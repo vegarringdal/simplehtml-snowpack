@@ -25,7 +25,7 @@ module.exports = {
   },
   buildOptions: {
     clean: true,
-    sourceMaps: true,
+    
     /* ... */
   },
   proxy: {
