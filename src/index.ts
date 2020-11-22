@@ -1,6 +1,6 @@
 import { applyPolyfill, ReflowStrategy } from "custom-elements-hmr-polyfill";
 
-if (import.meta.env.MODE === 'development') {
+if (import.meta.env.MODE === "development") {
   applyPolyfill(ReflowStrategy.NONE);
 }
 
@@ -10,4 +10,6 @@ if (import.meta.hot) {
     document.body.innerHTML = "";
     document.body.innerHTML = "<app-root></app-root>";
   });
+} else {
+  import("./elements/app-root");
 }
