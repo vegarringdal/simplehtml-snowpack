@@ -10,7 +10,8 @@ module.exports = {
       { cmd: "postcss", input: [".css"], output: [".css"] },
     ],
     "@snowpack/plugin-dotenv",
-    "@snowpack/plugin-typescript"
+    "@snowpack/plugin-typescript",
+    "@snowpack/plugin-webpack"
   ],
   install: [
     /* ... */
@@ -23,6 +24,8 @@ module.exports = {
     /* ... */
   },
   buildOptions: {
+    clean:true
+    
     /* ... */
   },
   proxy: {
