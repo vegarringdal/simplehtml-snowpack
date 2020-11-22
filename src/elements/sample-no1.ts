@@ -21,7 +21,7 @@ export default class extends HTMLElement {
 
             <div class="m-auto flex flex-col">
                 <label>
-                    FirstName
+                    FirstName:
                     <input
                         class="p-2 m-1"
                         .value=${form.firstName || ''}
