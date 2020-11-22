@@ -17,15 +17,15 @@ module.exports = {
     /* ... */
   ],
   installOptions: {
-      treeshake:true
+    treeshake: true,
     /* ... */
   },
   devOptions: {
     /* ... */
   },
   buildOptions: {
-    clean:true
-    
+    clean: true,
+    sourceMaps: true,
     /* ... */
   },
   proxy: {

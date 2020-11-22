@@ -10,12 +10,13 @@
       "paths": {},
       /* noEmit - Snowpack builds (emits) files, not tsc. */
       "noEmit": true,
-      /* LitElement - Add decorator support! */
+      /* @simple-html/core - Add decorator support! */
       "experimentalDecorators": true,
-      "emitDecoratorMetadata": true,
-      /* Additional Options */
+      "emitDecoratorMetadata": false, //not needed
+         /* Additional Options */
       "strict": true,
       "skipLibCheck": true,
+      "sourceMap": true,
       "forceConsistentCasingInFileNames": true,
       "resolveJsonModule": true,
       "allowSyntheticDefaultImports": true,
