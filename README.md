@@ -9,3 +9,11 @@ just to test how it works
 * `npm start`
 
 it should now open browser
+
+
+## make build
+
+* `npm run build`
+
+
+see build folder
