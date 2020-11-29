@@ -1,5 +1,5 @@
 # simplehtml-snowpack
-just to test how it works
+just to test how snowpack works
 
 
 
@@ -11,9 +11,10 @@ just to test how it works
 it should now open browser
 
 
-## make build
+## make build 
 
 * `npm run build`
 
+This needs more work, not tested very much
 
 see build folder
