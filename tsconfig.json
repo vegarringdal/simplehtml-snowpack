@@ -9,17 +9,30 @@
       /* paths - If you configure Snowpack import aliases, add them here. */
       "paths": {},
       /* noEmit - Snowpack builds (emits) files, not tsc. */
-      "noEmit": true,
-      /* @simple-html/core - Add decorator support! */
+      "noEmit": false,
+
+      "isolatedModules": false,
+      "preserveConstEnums": true,
+      "declaration": true,
+      "noImplicitAny": true,
+      "noImplicitReturns": true,
+      "noImplicitUseStrict": true,
+      "noUnusedParameters": true,
+      "suppressImplicitAnyIndexErrors": true,
+      "noFallthroughCasesInSwitch": true,
+      "noImplicitThis": false,
+      "noUnusedLocals": true,
+      "allowUnreachableCode": false,
+      "removeComments": true,
+      "emitDecoratorMetadata": false,
+      "importHelpers": false,
+      "strictNullChecks": false,
       "experimentalDecorators": true,
-      "emitDecoratorMetadata": false, //not needed
          /* Additional Options */
-      "strict": true,
       "skipLibCheck": true,
       "sourceMap": true,
       "forceConsistentCasingInFileNames": true,
       "resolveJsonModule": true,
-      "allowSyntheticDefaultImports": true,
-      "importsNotUsedAsValues": "error"
+      "allowSyntheticDefaultImports": true
     }
   }
