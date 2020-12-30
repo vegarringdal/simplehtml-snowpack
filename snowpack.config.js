@@ -1,8 +1,10 @@
+const { getConfigFileParsingDiagnostics } = require("typescript");
+
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
     public: "/",
-    src: "/_dist_",
+    src: "/",
   },
   plugins: [
     [
@@ -11,7 +13,6 @@ module.exports = {
     ],
     "@snowpack/plugin-dotenv",
     "@snowpack/plugin-typescript",
-    "@snowpack/plugin-webpack"
   ],
   install: [
     /* ... */
@@ -25,7 +26,6 @@ module.exports = {
   },
   buildOptions: {
     clean: true,
-    
     /* ... */
   },
   proxy: {
@@ -33,5 +33,12 @@ module.exports = {
   },
   alias: {
     /* ... */
+  },
+  experiments: {
+    optimize: {
+      bundle: true,
+      minify: true,
+      target: "es2018",
+    },
   },
 };
