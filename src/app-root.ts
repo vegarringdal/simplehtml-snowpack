@@ -1,3 +1,4 @@
+import './routes/routerConfig';
 import { html } from 'lit-html';
 import { customElement } from '@simple-html/core';
 import { navs, routerConfig } from './routes/routerConfig';
