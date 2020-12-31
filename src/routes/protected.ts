@@ -13,7 +13,7 @@ export default class extends HTMLElement {
   }
 
   public render() {
-    const [form, setForm] = formState.getStateObject();
+    const [form, setForm] = formState.getState();
     return html`
       <section class="p-2">
         <h1>Welcome to the inner circle :-)</h1>

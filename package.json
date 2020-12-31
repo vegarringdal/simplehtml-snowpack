@@ -6,7 +6,7 @@
   "scripts": {
     "start": "snowpack dev --watch",
     "build": "snowpack build",
-    "prod":"node run"
+    "prod": "node run"
   },
   "publishConfig": {
     "access": "public"
@@ -15,6 +15,8 @@
   "license": "ISC",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^3.1.3",
+    "@simple-html/core": "^3.0.0-next6",
+    "@simple-html/router": "^3.0.0-next6",
     "@snowpack/plugin-babel": "^2.1.5",
     "@snowpack/plugin-build-script": "^2.0.12",
     "@snowpack/plugin-dotenv": "^2.0.5",
@@ -33,8 +35,6 @@
     "snowpack": "^3.0.0-rc.2",
     "tailwindcss": "^2.0.2",
     "typescript": "^4.1.3",
-    "zlib": "^1.0.5",
-    "@simple-html/core": "^3.0.0-next5",
-    "@simple-html/router": "^3.0.0-next5"
+    "zlib": "^1.0.5"
   }
 }

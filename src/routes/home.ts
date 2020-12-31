@@ -5,7 +5,7 @@ import { formState } from "../state/settingsState";
 @customElement("home-route")
 export default class extends HTMLElement {
   public render() {
-    const form = formState.getObjectValue();
+    const form = formState.getValue();
     return html` <section class="p-2">
       <h1>home</h1>
       <form class="flex flex-col">

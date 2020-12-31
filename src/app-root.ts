@@ -15,7 +15,7 @@ export default class extends HTMLElement {
   }
 
   public render() {
-    const form = formState.getObjectValue();
+    const form = formState.getValue();
     return html`
       <nav class="flex bg-indigo-500 p-6">
         ${navs("main").map((route: any) => {
