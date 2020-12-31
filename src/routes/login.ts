@@ -12,7 +12,7 @@ export default class extends HTMLElement {
   }
 
   private authToggelBtn() {
-    const [, formSet] = formState.getStateObject();
+    const [, formSet] = formState.getState();
     formSet({ loggedin: isAuthenticted() ? false : true });
 
     // lets go to our login area
@@ -38,12 +38,12 @@ export default class extends HTMLElement {
 // some dummy funtions to simulate logout
 
 export function isAuthenticted() {
-  const form = formState.getObjectValue();
+  const form = formState.getValue();
   return form.loggedin;
 }
 
 export function setLogoutState() {
-  const [, formSet] = formState.getStateObject();
+  const [, formSet] = formState.getState();
   formSet({ loggedin: false });
   gotoURL(""); // goto home is a good place
 }
