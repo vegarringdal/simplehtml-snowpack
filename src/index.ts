@@ -1,4 +1,4 @@
-import "./index.css";
+
 
 // how can I treeshake this away ?
 import { applyPolyfill, ReflowStrategy } from "custom-elements-hmr-polyfill";

@@ -5,6 +5,7 @@ module.exports = {
   mount: {
     public: "/",
     src: "/",
+    packages: "/",
   },
   plugins: [
     [
@@ -22,9 +23,9 @@ module.exports = {
     /* ... */
   },
   devOptions: {
-    hmr:true,
-    hmrPort:4444
-    /* ... */
+    //port:8080,
+    //hmr:true
+
   },
   buildOptions: {
     clean: true,
@@ -35,7 +36,10 @@ module.exports = {
     /* ... */
   },
   alias: {
-    /* ... */
+    "@simple-html/core":"./packages/core/src",
+    "@simple-html/router":"./packages/router/src",
+    "@simple-html/datasource":"./packages/datasource/src",
+    "@simple-html/grid":"./packages/grid/src"
   },
   experiments: {
     optimize: {
