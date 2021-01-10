@@ -28,7 +28,8 @@ module.exports = {
   },
   buildOptions: {
     clean: true,
-    watch:true
+    watch:true,
+    sourceMaps:true
     /* ... */
   },
   proxy: {

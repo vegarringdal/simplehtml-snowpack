@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+        "label": "Client Build",
+        "type": "shell",
+        "command": "npm",
+        "args": [
+            "run",
+            "build"
+        ],
+        "options": {
+            "cwd": "${workspaceFolder}/"
+        },
+        "problemMatcher": []
+    },
+    {
+        "label": "Server Build",
+        "type": "shell",
+        "command": "npm",
+        "args": [
+            "run",
+            "mon"
+        ],
+        "options": {
+            "cwd": "${workspaceFolder}/"
+        },
+        "problemMatcher": []
+    },
+    {
+        "label": "Build",
+        "dependsOn": [
+            "Client Build",
+            "Server Build",
+            "chorme"
+        ],
+        "problemMatcher": [],
+     
+    }
+]
+}

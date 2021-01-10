@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "mon": "nodemon --watch backend --exec \"npm run prod\"",
-    "start": "concurrently \"npm run build\" \"npm run mon\"",
-    "start2": "snowpack dev --watch",
+    "start": "snowpack dev --watch",
     "build": "snowpack build",
     "prod": "node ./backend/run"
   },
