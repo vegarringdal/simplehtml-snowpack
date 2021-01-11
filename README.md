@@ -6,12 +6,15 @@ just to test how snowpack works
 ## how to get started
 
 * `npm install`
-* `npm run watch:client` (in own window so you see messages)
-* `npm run ts:watch:server`  (in own window so you see messages)
-* `npm run watch:server`  (in own window so you see messages) this calls `npm run dev:server`
-* start "chrome" configuration for debugging
 
-or run 
+## Use
+
+* `npm run watch:client` for client transpiling
+* `npm run ts:watch:server`  for server transpiling
+* `npm run watch:server` nodemon for watching/restarting server on server edits`npm run dev:server`
+* start "chrome" configuration for debugging client in vscode
+
+Or run `npm start` to just run `watch:client && ts:watch:server && watch:server` at once
 
 ## make builds 
 
