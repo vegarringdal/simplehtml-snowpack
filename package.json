@@ -9,9 +9,9 @@
     "watch:client": "snowpack build  --config snowpack.config.js",
     "ts:watch:server": "tsc --watch --project tsconfig-server.json -d --sourceMap --pretty",
     "build:server": "tsc --project tsconfig-server.json --outDir build_prod_server",
-    "build:client": "snowpack build --development --config snowpack.config-prod.js",
-    "dev:server": "node ./build_dev_server/index --type production",
-    "prod:server": "node ./build_prod_server/index --type production"
+    "build:client": "snowpack build --config snowpack.config-prod.js",
+    "dev:server": "node ./build_dev_server/index",
+    "prod:server": "node ./build_prod_server/index --production"
   },
   "publishConfig": {
     "access": "public"

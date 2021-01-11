@@ -1,7 +1,7 @@
 const { getConfigFileParsingDiagnostics } = require("typescript");
 
 process.env['BUILDTYPE'] = 'production';
-console.log(process.args)
+
 
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {

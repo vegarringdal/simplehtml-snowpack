@@ -1,12 +1,16 @@
-// just need a quick way to run production build
 const express = require("express");
-const app = express();
-const port = 80;
 const compression = require("compression");
 const { constants } = require("zlib");
 
 const ENVIORNMENT =
   process.argv.indexOf("--production") !== -1 ? "production" : "development";
+const STATIC_FOLDER = `build_${
+  ENVIORNMENT === "production" ? "prod" : "dev"
+}_client`;
+
+
+const app = express();
+const port = 80;
 
 app.use(
   compression({
@@ -16,15 +20,12 @@ app.use(
 );
 
 app.use(function (r: any, _q: any, next: any) {
-  console.log("s", r.path);
+  console.log("requested path", r.path);
   next();
 });
 
-app.use(
-  express.static(
-    `build_${ENVIORNMENT === "production" ? "prod" : "dev"}_client`
-  )
-);
+app.use(express.static(STATIC_FOLDER));
+
 
 app.listen(port, () => {
   console.log(`App{${ENVIORNMENT}} listening at http://localhost:${port}`);

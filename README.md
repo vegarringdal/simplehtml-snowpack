@@ -17,7 +17,7 @@ or run
 
 * `npm run build:client` uses "build_prod_client"
 * `npm run build:server` uses "build_prod_server"
-* `npm run prod` to launch express server to build folder
+* `npm run prod:server` to launch express server to build folder
 
 ## make builds 
 * `npm run prod:server`
