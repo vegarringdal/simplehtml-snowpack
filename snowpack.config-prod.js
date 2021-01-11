@@ -1,45 +1,28 @@
 const { getConfigFileParsingDiagnostics } = require("typescript");
 
+process.env['BUILDTYPE'] = 'production';
+console.log(process.args)
+
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
     public: "/",
-    src: "/",
-    packages: "/",
+    src_client: "/",
   },
   plugins: [
     [
       "@snowpack/plugin-build-script",
-      { cmd: "postcss", input: [".css"], output: [".css"] },
+      { cmd: "postcss", input: [".css"], output: [".css"]},
     ],
     "@snowpack/plugin-dotenv",
-    "@snowpack/plugin-typescript",
-  ],
-  install: [
-    /* ... */
+    ["@snowpack/plugin-typescript",{args:"--project tsconfig-client.json"}]
   ],
   installOptions: {
     treeshake: true,
-    /* ... */
-  },
-  devOptions: {
-    //port:8080,
-    //hmr:true
-
   },
   buildOptions: {
+    out:'build_prod_client',
     clean: true,
-    watch:true
-    /* ... */
-  },
-  proxy: {
-    /* ... */
-  },
-  alias: {
-    "@simple-html/core":"./packages/core/src",
-    "@simple-html/router":"./packages/router/src",
-    "@simple-html/datasource":"./packages/datasource/src",
-    "@simple-html/grid":"./packages/grid/src"
   },
   experiments: {
     optimize: {

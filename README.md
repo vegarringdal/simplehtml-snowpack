@@ -6,16 +6,19 @@ just to test how snowpack works
 ## how to get started
 
 * `npm install`
-* `npm start`
+* `npm run watch:client` (in own window so you see messages)
+* `npm run ts:watch:server`  (in own window so you see messages)
+* `npm run watch:server`  (in own window so you see messages) this calls `npm run dev:server`
+* start "chrome" configuration for debugging
 
-it should now open browser
+or run 
 
+## make builds 
 
-## make build 
-
-* `npm run build`
+* `npm run build:client` uses "build_prod_client"
+* `npm run build:server` uses "build_prod_server"
 * `npm run prod` to launch express server to build folder
 
-This needs more work, not tested very much
+## make builds 
+* `npm run prod:server`
 
-see build folder

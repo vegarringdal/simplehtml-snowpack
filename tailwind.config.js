@@ -1,6 +1,6 @@
 module.exports = {
     purge: {
-      enabled: false,
-      content: ['./src/**/*.ts'],
+      enabled: process.env['BUILDTYPE'] !== 'development',
+      content: ['./src_client/**/*.ts'],
     }
   }

@@ -4,10 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "mon": "nodemon --watch backend --exec \"npm run prod\"",
-    "start": "snowpack dev --watch",
-    "build": "snowpack build",
-    "prod": "node ./backend/run"
+    "start": "node watch-all",
+    "watch:server": "nodemon --watch build_dev_backend --exec \"npm run dev:server\"",
+    "watch:client": "snowpack build  --config snowpack.config.js",
+    "ts:watch:server": "tsc --watch --project tsconfig-server.json -d --sourceMap --pretty",
+    "build:server": "tsc --project tsconfig-server.json --outDir build_prod_server",
+    "build:client": "snowpack build --development --config snowpack.config-prod.js",
+    "dev:server": "node ./build_dev_server/index --type production",
+    "prod:server": "node ./build_prod_server/index --type production"
   },
   "publishConfig": {
     "access": "public"
@@ -39,7 +43,5 @@
     "typescript": "^4.1.3",
     "zlib": "^1.0.5"
   },
-  "dependencies": {
-    "concurrently": "^5.3.0"
-  }
+  "dependencies": {}
 }
