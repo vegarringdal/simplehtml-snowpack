@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node watch-all",
-    "watch:server": "nodemon --watch build_dev_backend --exec \"npm run dev:server\"",
+    "watch:server": "nodemon --watch build_dev_server --exec \"npm run dev:server\"",
     "watch:client": "snowpack build  --config snowpack.config.js",
     "ts:watch:server": "tsc --watch --project tsconfig-server.json -d --sourceMap --pretty",
     "build:server": "tsc --project tsconfig-server.json --outDir build_prod_server",
